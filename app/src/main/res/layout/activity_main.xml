@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108">
+
+        <RadioButton
+            android:id="@+id/rmasculino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/rmasculino" />
+
+        <RadioButton
+            android:id="@+id/rfemenino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rfemenino" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="invocaMensaje"
+        android:text="@string/men"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <EditText
+        android:id="@+id/txtnum1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/num1"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMensaje"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <EditText
+        android:id="@+id/txtnum2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/num2"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnum1"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="367dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnum2">
+
+        <RadioButton
+            android:id="@+id/rsuma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="math"
+            android:text="@string/rsuma" />
+
+        <RadioButton
+            android:id="@+id/rresta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="math"
+            android:text="@string/rresta" />
+
+        <RadioButton
+            android:id="@+id/rmultiplicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="math"
+            android:text="@string/rmultiplicacion" />
+
+        <RadioButton
+            android:id="@+id/rdivision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="math"
+            android:text="@string/rdivision" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtresultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/res"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
